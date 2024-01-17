@@ -1,0 +1,66 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body
+{
+    position: relative; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh; 
+    background-color: #19a63e;
+}
+.clock 
+{
+    background-color:#5c736e ;
+    height: 200px; 
+    width: 200px; 
+    border-radius: 50%;
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    position: relative;
+}
+.clock ul li
+{
+    list-style-type: none; 
+    text-align: center;
+    position: absolute;
+    transform: rotate(calc(30deg * var(--i)));
+    inset: 4px;
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+}
+.clock ul li span 
+{
+    position:absolute; 
+    transform: rotate(calc(-30deg * var(--i)));
+}
+.clock::after 
+{
+    content: "";
+    width: 10px; 
+    height: 10px; 
+    background-color: beige;
+    border-radius: 50%;
+}
+
+.needle
+{
+    position: relative;
+    left:5px;
+    display: flex;
+    align-items: flex-end;
+    text-align: center;
+}
+.needle span
+{
+    width: 5px; 
+    height: var(--h);
+    background-color: var(--clr);
+    position: absolute ; 
+    border-radius: 5px;
+}
